@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+:root {
+  font-variant-ligatures: none;
+}
+
+/* Prevent KaTeX formulas from causing page-wide horizontal scroll */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 100%;
+}
+
+/* Ensure inline math doesn't cause overflow either */
+.katex {
+  max-width: 100%;
+}

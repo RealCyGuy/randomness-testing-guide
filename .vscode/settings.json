@@ -1,0 +1,11 @@
+{
+  "editor.wordBasedSuggestions": "currentDocument",
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.(js|jsx|ts|tsx)$",
+        "cmd": "biome format ${file} --write && biome lint ${file} --write --unsafe"
+      }
+    ]
+  }
+}
