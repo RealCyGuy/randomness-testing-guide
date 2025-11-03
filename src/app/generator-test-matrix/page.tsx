@@ -44,9 +44,7 @@ export default function Page() {
         <table className="min-w-full border-collapse border border-neutral-300">
           <thead>
             <tr className="bg-neutral-900">
-              <th className="border border-neutral-300 px-4 py-2 text-left font-semibold">
-                Generator
-              </th>
+              <th className="border border-neutral-300 px-4 py-2 text-left font-semibold"></th>
               {tests.map((test) => (
                 <th
                   key={test.name}
