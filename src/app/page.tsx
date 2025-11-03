@@ -1,7 +1,14 @@
-import Image from "next/image";
+"use client";
+
 import { HiExternalLink } from "react-icons/hi";
 import { ArticleChapterTitle } from "@/src/components/ArticleChapterTitle";
 import { ArticleWrapper } from "@/src/components/ArticleWrapper";
+import { UserInputTestInterface } from "@/src/components/UserInputTestInterface";
+import { autocorrelationTest } from "@/src/tests/autocorrelationTest";
+import { blockFrequencyTest } from "@/src/tests/blockFrequencyTest";
+import { frequencyTest } from "@/src/tests/frequencyTest";
+import { runsTest } from "@/src/tests/runsTest";
+import { wordFrequencyTest } from "@/src/tests/wordFrequencyTest";
 
 export default function Page() {
   return (
@@ -10,17 +17,17 @@ export default function Page() {
       <p>
         Welcome to the Randomness Testing Guide. This website is a beginner's
         guide to randomness testing with a focus on simplicity and
-        explainability.
+        explainability. Try it out below!
       </p>
-      <div className="my-6 overflow-x-auto">
-        <Image
-          src="/dilbert-random.webp"
-          alt="Dilbert comic about random number generation"
-          width={800}
-          height={250}
-          className="rounded min-w-[800px]"
-        />
-      </div>
+      <UserInputTestInterface
+        testFunctions={[
+          frequencyTest,
+          blockFrequencyTest(10),
+          runsTest,
+          wordFrequencyTest(8),
+          autocorrelationTest(8),
+        ]}
+      />
       <p>
         In the late 1990s, the National Institute of Standards and Technology
         (NIST) began development of the Advanced Encryption Standard (AES).

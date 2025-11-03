@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { TestCaseAccordion } from "@/src/components/TestCaseAccordion";
+import { TestResult } from "@/src/utils/TestResult";
 
 export function TestInterface({
   testCases,
@@ -43,10 +44,4 @@ export function TestInterface({
 interface TestCase {
   description: string;
   sequence: string;
-}
-
-interface TestResult {
-  testName: string;
-  pValue: string;
-  [key: string]: string | number;
 }

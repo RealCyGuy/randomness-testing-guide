@@ -1,4 +1,5 @@
 import { TestResultDisplay } from "@/src/components/TestResultDisplay";
+import { TestResult } from "@/src/utils/TestResult";
 
 export function TestCaseAccordion({
   testCase,
@@ -63,10 +64,4 @@ export function TestCaseAccordion({
 interface TestCase {
   description: string;
   sequence: string;
-}
-
-interface TestResult {
-  testName: string;
-  pValue: string;
-  [key: string]: string | number;
 }

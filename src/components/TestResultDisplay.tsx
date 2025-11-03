@@ -1,3 +1,5 @@
+import { TestResult } from "@/src/utils/TestResult";
+
 export function TestResultDisplay({ result }: { result: TestResult }) {
   return (
     <div className="p-3 bg-zinc-800 rounded-lg border border-neutral-600">
@@ -42,10 +44,4 @@ export function TestResultDisplay({ result }: { result: TestResult }) {
       </div>
     </div>
   );
-}
-
-interface TestResult {
-  testName: string;
-  pValue: string;
-  [key: string]: string | number;
 }
